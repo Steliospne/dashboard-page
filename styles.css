@@ -1,35 +1,113 @@
 * {
     margin: 0;
     padding: 0;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
-.wrapper.nav {}
-.wrapper>.nav {}
+html {
+    border: none;
+}
 
-.wrapper.header{}
-.wrapper>.header{}
+body {
+    height: 100vh;
+    border: none;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-rows: auto auto repeat(2, 1fr);
+    grid-template-columns: 1fr 4fr;
+    height: 100%;
+    border: none;
+}
+
+.wrapper.nav {
+    grid-area: 1 / 2 / 1 / 5;
+}
+
+.wrapper>.nav {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.nav {
+}
+
+.wrapper.header{
+    grid-area: 2 / 2 / 2 / 5;
+}
+.wrapper>.header{
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    grid-auto-flow: column;
+}
 button.new {}
 button.upload {}
 button.share {}
 
-.wrapper.side-bar{}
-.wrapper>.side-bar{}
-.main-btns{}
-button.home {}
-button.profile {}
-button.messages {}
-button.history {}
-button.tasks {}
-button.communities {}
+.wrapper.side-bar{
+    background-color: #1992d4;
+    grid-area: 1 / 1 / 5 / 1;
+}
+.wrapper>.side-bar{
+    display: grid;
+    gap: 25px 0;
+}
+.main-btns{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 1fr;
+    gap: 0 15px;
+}
 
-.secondary-btns {}
-button.settings {}
-button.announcements {}
-button.privacy {}
+.main-btn-icons {
+    display: grid;
+}
 
-.wrapper.main-content{}
-.wrapper>.main-content{}
+.main-btn-icons img {
+    height: 25px;
+    filter: invert(1);
+}
+
+.secondary-btns {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 1fr;
+    gap: 0 15px;
+}
+
+.secondary-btn-icons {
+    display: grid;
+}
+
+.secondary-btn-icons img {
+    height: 25px;
+    filter: invert(1);
+}
+
+.btns {
+    display: grid;
+}
+
+.btns button {
+    background: none;
+    color: white;
+    font-weight: 700;
+    border: none;
+    text-align: left;
+}
+
+.btns button:hover {
+    background-color: #1578ad;
+}
+
+.wrapper.main-content {
+    background-color: #e2e8f0;
+    grid-area: 3 / 2 / 5 / 5;
+}
+.wrapper>.main-content{
+    display: grid;
+}
 .projects {}
 .announcements {}
 .trending {}

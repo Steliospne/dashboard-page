@@ -7,48 +7,67 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <div class="wrapper nav">
-        <div class="nav">
-            <div class="search-bar"></div>
-            <div class="notifications-logo"></div>
-            <div class="user-logo"></div>
-            <div class="user-name"></div>
-        </div>
-    </div>
-
-    <div class="wrapper header">
-        <div class="header">
-            <div class="user-header"></div>
-            <button class="new">New</button>
-            <button class="upload">Upload</button>
-            <button class="share">Share</button>
-        </div>
-    </div>
-
-    <div class="wrapper side-bar">
-        <div class="side-bar">
-            <div class="side-bar-logo"></div>
-            <div class="main-btns">
-                <button class="home">Home</button>
-                <button class="profile">Profile</button>
-                <button class="messages">Messages</button>
-                <button class="history">History</button>
-                <button class="tasks">Tasks</button>
-                <button class="communities">Communities</button>
-            </div>
-            <div class="secondary-btns">
-                <button class="settings">Settings</button>
-                <button class="support">Support</button>
-                <button class="privacy">Privacy</button>
+    <div class="dashboard-container">
+        <div class="wrapper nav">
+            <div class="nav">
+                <div class="search-icon">icon</div>
+                <div class="search-bar">
+                    <input type="search" id="search" name="search" placeholder="search">
+                </div>
+                <div class="notifications-icon">icon</div>
+                <div class="user-avatar">avatar</div>
+                <div class="user-name">user-name</div>
             </div>
         </div>
-    </div>
-
-    <div class="wrapper main-content">
-        <div class="main-content">
-            <div class="projects"></div>
-            <div class="announcements"></div>
-            <div class="trending"></div>
+        <div class="wrapper header">
+            <div class="header">
+                <div class="user-header"></div>
+                <button class="new">New</button>
+                <button class="upload">Upload</button>
+                <button class="share">Share</button>
+            </div>
+        </div>
+        <div class="wrapper side-bar">
+            <div class="side-bar">
+                <div class="side-bar-logo">logo</div>
+                <div class="main-btns">
+                    <div class="main-btn-icons">
+                        <img src="icons/home.svg" class="home-icon"></img>
+                        <img src="icons/card-account-details-outline.svg" class="profile-icon"></img>
+                        <img src="icons/message-reply.svg" class="messages-icon"></img>
+                        <img src="icons/history.svg" class="history-icon"></img>
+                        <img src="icons/calendar-check.svg" class="tasks-icon"></img>
+                        <img src="icons/account-group.svg" class="communities-icon"></img>
+                    </div>
+                    <div class="btns">
+                        <button class="home">Home</button>
+                        <button class="profile">Profile</button>
+                        <button class="messages">Messages</button>
+                        <button class="history">History</button>
+                        <button class="tasks">Tasks</button>
+                        <button class="communities">Communities</button>
+                    </div>
+                </div>
+                <div class="secondary-btns">
+                    <div class="secondary-btn-icons">
+                        <img src="icons/cog.svg" class="settings-icon"></img>
+                        <img src="icons/help-box.svg" class="support-icon"></img>
+                        <img src="icons/shield-check.svg" class="privacy-icon"></img>
+                    </div>
+                    <div class="btns">
+                        <button class="settings">Settings</button>
+                        <button class="support">Support</button>
+                        <button class="privacy">Privacy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper main-content">
+            <div class="main-content">
+                <div class="projects"></div>
+                <div class="announcements"></div>
+                <div class="trending"></div>
+            </div>
         </div>
     </div>
 </body>
