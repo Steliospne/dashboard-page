@@ -55,7 +55,9 @@ button.share {}
 
 .wrapper>.side-bar {
     display: grid;
-    gap: 25px 0;
+    gap: 40px 0;
+    padding: 20px;
+    color: white;
 }
 
 .main-btns {
@@ -63,6 +65,15 @@ button.share {}
     grid-auto-flow: column;
     grid-template-columns: auto 1fr;
     gap: 0 15px;
+}
+.side-bar-logo {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.side-bar-logo > img {
+    height: 35px;
+    filter: invert(1)
 }
 
 .main-btn-icons {
@@ -97,9 +108,11 @@ button.share {}
 .btns button {
     background: none;
     color: white;
+    font-size: larger;
     font-weight: 700;
     border: none;
     text-align: left;
+    padding: 10px 0;
 }
 
 .btns button:hover {
@@ -136,18 +149,47 @@ button.share {}
     margin: 20px;
 }
 
-.projects > div {
+.project-cell {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     min-height: 200px;
-    justify-content: center;
     background-color: white;
     border: solid 1px lightgrey;
     border-radius: 12px;
 }
 
-.projects >div>*{
+.baner {
+    padding: 5px;
+    background-color: red;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius:inherit ;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 15px;
+}
+
+.project-card > p {
+    padding: 5px;
+}
+
+p:first-child {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.card-btns {
+    margin-top: auto;
+    display: flex;
+    justify-content: end;
+}
+
+.card-btns img {
+    height: 20px;
+    padding: 5px;
 }
 
 .header-announce h3 {
