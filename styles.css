@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+
+.wrapper.nav {}
+.wrapper>.nav {}
+
+.wrapper.header{}
+.wrapper>.header{}
+button.new {}
+button.upload {}
+button.share {}
+
+.wrapper.side-bar{}
+.wrapper>.side-bar{}
+.main-btns{}
+button.home {}
+button.profile {}
+button.messages {}
+button.history {}
+button.tasks {}
+button.communities {}
+
+.secondary-btns {}
+button.settings {}
+button.announcements {}
+button.privacy {}
+
+.wrapper.main-content{}
+.wrapper>.main-content{}
+.projects {}
+.announcements {}
+.trending {}
