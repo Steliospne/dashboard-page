@@ -4,20 +4,11 @@
     /* border: 1px solid red; */
 }
 
-html {
-    border: none;
-}
-
-body {
-    height: 100vh;
-    border: none;
-}
-
 .dashboard-container {
     display: grid;
     grid-template-rows: auto auto repeat(2, 1fr);
     grid-template-columns: 1fr 4fr;
-    height: 100%;
+    height: 100vh;
     border: none;
 }
 
@@ -27,29 +18,97 @@ body {
 
 .wrapper>.nav {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: min-content 1fr repeat(3, min-content);
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
 }
 
-.nav {}
+.nav img {
+    height: 25px;
+}
+
+.nav img.notifications-icon {
+    margin-left: 50px;
+}
+
+.nav input {
+    border-radius: 16px;
+    border: none;
+    background-color: #e2e8f0;
+    height: 25px;
+}
+
+.nav .user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.nav .user-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 10px;
+    width: max-content;
+}
+
+.user-header p {
+    align-self: end;
+}
+
+.user-header div {
+    align-self: start;
+}
 
 .wrapper.header {
     grid-area: 2 / 2 / 2 / 5;
+    margin: 0 50px;
 }
 
 .wrapper>.header {
     display: grid;
     grid-template-columns: 1fr auto auto auto;
     grid-auto-flow: column;
+    gap: 30px;
 }
 
-button.new {}
+.user-header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: min-content auto;
+    gap: 0 10px;
+}
 
-button.upload {}
+.user-header img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    grid-area: 1 / 1 / 3 / 1;
+}
 
-button.share {}
+.user-header .user-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 10px;
+    width: max-content;
+    grid-column: 2;
+}
+
+.header button {
+    align-self: center;
+    border-radius: 16px;
+    border: none;
+    background-color: #9F70FD;
+    height: 25px;
+    color: white;
+    letter-spacing: 1px;
+    width: 75px;
+    height: 35px;
+    font-weight: 700;
+}
 
 .wrapper.side-bar {
-    background-color: #1992d4;
+    background-color: #7F27FF;
     grid-area: 1 / 1 / 5 / 1;
 }
 
@@ -80,10 +139,6 @@ button.share {}
     display: grid;
 }
 
-.main-btn-icons img {
-    height: 25px;
-    filter: invert(1);
-}
 
 .secondary-btns {
     display: grid;
@@ -96,9 +151,11 @@ button.share {}
     display: grid;
 }
 
+.main-btn-icons img ,
 .secondary-btn-icons img {
     height: 25px;
     filter: invert(1);
+    align-self: center;
 }
 
 .btns {
@@ -116,7 +173,7 @@ button.share {}
 }
 
 .btns button:hover {
-    background-color: #1578ad;
+    color: lightgray;
 }
 
 .wrapper.main-content {
@@ -152,7 +209,7 @@ button.share {}
 .project-cell {
     display: flex;
     flex-direction: row;
-    min-height: 200px;
+    min-height: 150px;
     background-color: white;
     border: solid 1px lightgrey;
     border-radius: 12px;
@@ -160,7 +217,7 @@ button.share {}
 
 .baner {
     padding: 5px;
-    background-color: red;
+    background-color: #FDBF60;
     border-top-left-radius: inherit;
     border-bottom-left-radius:inherit ;
 }
@@ -181,6 +238,10 @@ p:first-child {
     font-size: 1.1rem;
 }
 
+.project-card > p:nth-child(2) {
+    color: #636363;
+}
+
 .card-btns {
     margin-top: auto;
     display: flex;
@@ -195,7 +256,7 @@ p:first-child {
 .header-announce h3 {
     grid-area: 1/2/1/3;
 }
-.wrapper .announcements {
+.wrapper-announcements {
     grid-area: 2/2/3/3;
     margin: 20px;
 }
@@ -204,18 +265,35 @@ p:first-child {
 .announcements {
     display: flex;
     flex-direction: column;
-    min-height: 200px;
+    /* min-height: 200px; */
     background-color: white;
-    background-size: contain;
-    border: solid 1px lightgrey;
     border-radius: 12px;
+    padding: 10px;
 }
 
 .announcement-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 15px;
+}
+
+.announcement-card:nth-child(odd) {
     padding: 15px;
+}
+
+.announcements div:nth-child(2)>p:first-child {
+    border-top: solid 1px lightgrey;
+    padding-top: 15px;
+}
+.announcements div:nth-child(2)>p:nth-child(2) {
+    border-bottom: solid 1px lightgrey;
+    padding-bottom: 15px;
+}
+
+.announcement-card > p:last-child {
+    font-size: 0.8rem;
+    color: #636363;
 }
 
 .header-trending h3 {
